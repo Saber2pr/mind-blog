@@ -1,0 +1,27 @@
+name: Wiki Builder
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:        
+      - uses: actions/checkout@v4.1.1
+      - uses: Saber2pr/wiki-builder@v0.0.79
+        with:
+          cname: saber2pr.top
+          ignoreCnameFile: true
+          basename: /mind-blog
+          gaId: G-6CLMYWGQBH
+          gaAdId: ca-pub-3641373095149503
+          gaAdsTxt: google.com, pub-3641373095149503, DIRECT, f08c47fec0942fa0
+          gaAdsSlotHtml: <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3641373095149503" data-ad-slot="5932086556"></ins>
+          iconUrl: //saber2pr.top/MyWeb/resource/image/mind-blog.jpeg
+          expandAllMenu: on
+          title: 青春只一晌
+          keywords: 人生感悟,心理分析,人格建设,健康心态,心理辅导
+          description: 探索人生感悟，深入心理分析，助力人格建设，培养健康心态，实现内在成长与情绪平衡，探索更清晰、更坚定的自我之路。
